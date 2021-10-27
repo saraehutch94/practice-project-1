@@ -1,8 +1,36 @@
+
 * {
     box-sizing: border-box;
     margin: 0;
 }
 
 body {
-    background-color: #000;
+    background-color: #0c022a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Helvetica;
+}
+
+header, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    color: #daa520;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    flex-direction: column;
+}
+
+@media (min-width: 764px) {
+    header {
+        justify-content: start;
+        padding-left: 1rem;
+    }
 }
