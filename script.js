@@ -8,6 +8,8 @@ let apiData;
 const $main = $('main');
 // Event Listeners
 
+$main.on("mouseover", "article", handleHover);
+
 // Functions
 
 getData(); // call function immediately so that data loads on page load
@@ -21,6 +23,10 @@ function getData() {
     }, function(error) {
 
     });
+}
+
+function handleHover() {
+    console.log(this);
 }
 
 function render() {
