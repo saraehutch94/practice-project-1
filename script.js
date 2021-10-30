@@ -26,7 +26,9 @@ function getData() {
 }
 
 function handleHover() {
-    console.log(this);
+    $(this).children("h3").fadeOut(1500, function() {
+        $(this).siblings().toggleClass("hidden");
+    })
 }
 
 function render() {
@@ -34,6 +36,7 @@ function render() {
         return`
             <article style="background-image: url(${photoObject.url})">
                 <h3>${photoObject.title}</h3>
+                <p class="hidden">${photoObject.explanation}</p>
             </article>`;
     }).join(""); // .map transforms the elements in the array it was called on returning them to a new array
     $main.html(`<section>${photoCards}</section>`);

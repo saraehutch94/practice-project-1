@@ -45,8 +45,16 @@ article {
     margin: .15 rem;
 }
 
+article p {
+    overflow: hidden;
+}
+
 footer {
     flex-direction: column;
+}
+
+.hidden {
+    display: none;
 }
 
 @media (min-width: 764px) {
